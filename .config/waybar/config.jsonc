@@ -1,0 +1,153 @@
+{
+    "height": 18, 
+    "position": "bottom",
+    "spacing": 6,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad"
+        // "idle_inhibitor"
+        // "clock",
+        // "custom/salah"
+    ],
+    // "modules-center": ["sway/window"],
+    "modules-center": [
+        "clock",
+        "custom/sep",
+        "custom/salah"
+    ],
+    "modules-right": [
+        "custom/nett",
+        "custom/sep",
+        "pulseaudio",
+        "custom/sep",
+        "backlight",
+        "custom/sep",
+        "battery",
+        "custom/sep",
+        "network",
+        "custom/sep",
+        "sway/language",
+        "tray"
+    ],
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            // "1": ">_",
+            // "1": "󰮤",
+            // "1": "",
+            "1": ">_",
+            // "2": "",
+            "2": "",
+            "3": "",
+            "10": "",
+            // "urgent": "",
+            // "focused": "",
+            // "default": ""
+        }
+    },
+
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "sway/language": {
+        "format": "󰌌 {}",
+        "tooltip": false
+    }, 
+    "idle_inhibitor": {
+        "format": " {icon}",
+        "tooltip": false,
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "clock": {
+        "format": " {:%I:%M %p  󰸘 %a %d-%m-%y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip": false
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "tooltip": false,
+        "min-length": 6
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "tooltip": false,
+        "format-icons": ["", "", "", "", ""]
+    },
+
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠ Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "custom/sep" : {
+        "format": "|",
+        "tooltip": false
+    },   
+    "custom/nett" : {
+        "format": "{}",
+        "interval" : 1,
+        "tooltip": false,
+        "exec" : "~/.config/waybar/scripts/nettraf",
+    },
+    "custom/salah" : {
+        // "format": "<span class=\"isRed\"> </span>{}",
+        "format": " {}",
+        "interval" : 1200,
+        "exec" : "~/.config/waybar/scripts/salaht",
+        "signal": 9,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        // "on-click": "pavucontrol"
+    }
+}
