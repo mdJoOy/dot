@@ -6,7 +6,7 @@ unsetopt PROMPT_SP
 # export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}" # if use dwm then use it
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
-
+export PATH=$PATH:/usr/local/go/bin
 
 
 # Default programs:
@@ -36,7 +36,3 @@ export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
 
-if [ $(tty) = '/dev/tty1' ]
-then
-    exec sway
-fi	

@@ -92,4 +92,4 @@ alias prs="clear && printf '\n\n\n\nBismiAllah\n' && sleep 1 && countdown 40m &&
 alias pr="clear && printf '\n\n\n\nBismiAllah\n' && sleep 1 && countdown 25m &&  mpv --loop=2 '/home/sk/vids/yt/Alarm-Clock Sound!!! [iNpXCzaWW1s].m4a'"
 
 # Load syntax highlighting should be at last
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  2>/dev/null # Works in fedora maybe 
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null # Works in fedora maybe 
