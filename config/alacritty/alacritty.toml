@@ -1,0 +1,64 @@
+[general]
+import = [
+    "~/.config/alacritty/catppuccin_mocha.toml"
+]
+
+live_config_reload = true
+
+[window]
+opacity = 0.8
+title = "Alacritty"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+style = "Block"
+vi_mode_style = "Block"
+
+[font]
+size = 11
+
+[font.bold]
+family = "Jetbrains Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Jetbrains Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Jetbrains Mono"
+style = "Italic"
+
+[font.normal]
+family = "Jetbrains Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "K"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "J"
+mods = "Alt"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
