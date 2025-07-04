@@ -147,6 +147,7 @@ require('lazy').setup({
 
   -- prime plugs
   -- { 'ThePrimeagen/vim-be-good' },
+  'ThePrimeagen/vim-be-good',
   {
     'ThePrimeagen/harpoon',
     branch = "harpoon2",
